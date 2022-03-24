@@ -3,7 +3,7 @@ import './Meal.css'
 
 
 const Meal = (props) => {
-    console.log(props.meal);
+
     const { strMeal, strCategory, strArea, strMealThumb } = props.meal;
     return (
         <div className='meal'>
@@ -11,7 +11,7 @@ const Meal = (props) => {
             <h2>{strMeal}</h2>
             <p>Catagory: {strCategory}</p>
             <p>Type: {strArea}</p>
-            <button className='btn'>Add To Cart</button>
+            <button onClick={() => props.carthandler(strMeal)} className='btn'>Add To Cart</button>
         </div>
     );
 };
