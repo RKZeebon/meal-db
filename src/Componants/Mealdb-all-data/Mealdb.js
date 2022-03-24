@@ -5,13 +5,15 @@ import './Mealdb.css'
 
 const Mealdb = () => {
     const [meals, setmeals] = useState([])
+
+    const [meal, setmeal] = useState([])
     useEffect(() => {
         fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
             .then(res => res.json())
             .then(data => setmeals(data.meals))
     }, [])
 
-    const handleCart = (name) => console.log(name)
+    const handleCart = (name) => setmeal(name)
 
     return (
         <div className='mealdb'>
@@ -25,7 +27,7 @@ const Mealdb = () => {
                 }
             </div>
             <div className='cart-container'>
-                <Cart></Cart>
+                <Cart name={meal}></Cart>
             </div>
         </div>
     );
