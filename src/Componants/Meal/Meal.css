@@ -1,0 +1,25 @@
+.meal{
+    border: brown 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+.meal img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.btn{
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(165, 42, 42, 0.664);
+
+}
+.btn:hover{
+    background-color: brown;
+}
