@@ -8,7 +8,7 @@ const Mealdb = () => {
 
     const [meal, setmeal] = useState([])
     useEffect(() => {
-        fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=a')
+        fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=a')
             .then(res => res.json())
             .then(data => setmeals(data.meals))
     }, [])
