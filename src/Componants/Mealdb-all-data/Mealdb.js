@@ -13,7 +13,19 @@ const Mealdb = () => {
             .then(data => setmeals(data.meals))
     }, [])
 
-    const handleCart = (name) => setmeal(name)
+    const handleCart = (name) => {
+
+        if (meal.length === 0) {
+            const selectedMeal = [...meal, " ", name]
+
+            setmeal(selectedMeal)
+        }
+        else {
+            const selectedMeal = [...meal, ", ", name]
+
+            setmeal(selectedMeal)
+        }
+    }
 
     return (
         <div className='mealdb'>

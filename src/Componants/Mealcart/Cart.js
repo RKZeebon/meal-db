@@ -3,8 +3,7 @@ import './Cart.css'
 const Cart = (props) => {
     return (
         <div className='cart'>
-            <h4>Order Summary:</h4>
-            <h5>Selected Ittem: {props.name}</h5>
+            <h2>Selected Ittem: </h2><h3>{props.name}</h3>
 
         </div>
     );
